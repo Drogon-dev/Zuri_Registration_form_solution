@@ -9,7 +9,8 @@ const errEmail = document.getElementById("errEmail");
 const errPassword = document.getElementById("errPassword");
 
 
-btn.addEventListener('focus', function() {
+btn.addEventListener('click', (e) => {
+    e.preventDefault;
     if (firstName.value == null || firstName.value == undefined || firstName.value == '' || firstName.value <= 0) {
         errFirstName.style.display = 'block';
         errFirstName.style.textAlign = 'right'
@@ -24,7 +25,8 @@ btn.addEventListener('focus', function() {
         firstName.style.background = 'none'
     }
 })
-btn.addEventListener('focus', function() {
+btn.addEventListener('click', (e) => {
+    e.preventDefault;
     if (lastName.value == null || lastName.value == undefined || lastName.value == '' || lastName.value <= 0) {
         errLastName.style.display = 'block';
         errLastName.style.textAlign = 'right'
@@ -39,7 +41,8 @@ btn.addEventListener('focus', function() {
         lastName.style.background = 'none'
     }
 })
-btn.addEventListener('focus', function() {
+btn.addEventListener('click', (e) => {
+    e.preventDefault;
     if (email.value == null || email.value == undefined || email.value == '' || (email.value.indexOf('@') == -1) || (email.value.indexOf('.com') == -1) || email.value <= 0) {
         errEmail.style.display = 'block';
         errEmail.style.textAlign = 'right'
@@ -55,7 +58,8 @@ btn.addEventListener('focus', function() {
         email.style.background = 'none'
     }
 })
-btn.addEventListener('focus', function() {
+btn.addEventListener('click', (e) => {
+    e.preventDefault;
     if (password.value == null || password.value == undefined || password.value == '' || password.length < 6) {
         errPassword.style.display = 'block';
         errPassword.style.textAlign = 'right'
