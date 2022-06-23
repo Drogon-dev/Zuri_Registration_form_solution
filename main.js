@@ -1,3 +1,4 @@
+//creating variable for form fields, submit button and error messages
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const email = document.getElementById("email");
@@ -8,9 +9,10 @@ const errLastName = document.getElementById("errLastName");
 const errEmail = document.getElementById("errEmail");
 const errPassword = document.getElementById("errPassword");
 
-
+//adding the click event  listener to the submit button
 btn.addEventListener('click', (e) => {
     e.preventDefault;
+    //check to see if the FirstName form field is empty then execute code block
     if (firstName.value == null || firstName.value == undefined || firstName.value == '' || firstName.value <= 0) {
         errFirstName.style.display = 'block';
         errFirstName.style.textAlign = 'right'
@@ -27,6 +29,7 @@ btn.addEventListener('click', (e) => {
 })
 btn.addEventListener('click', (e) => {
     e.preventDefault;
+    //check to see if the LastName form field is empty then execute code block
     if (lastName.value == null || lastName.value == undefined || lastName.value == '' || lastName.value <= 0) {
         errLastName.style.display = 'block';
         errLastName.style.textAlign = 'right'
@@ -43,6 +46,7 @@ btn.addEventListener('click', (e) => {
 })
 btn.addEventListener('click', (e) => {
     e.preventDefault;
+    //check to see if the email form field is empty then execute code block
     if (email.value == null || email.value == undefined || email.value == '' || (email.value.indexOf('@') == -1) || (email.value.indexOf('.com') == -1) || email.value <= 0) {
         errEmail.style.display = 'block';
         errEmail.style.textAlign = 'right'
@@ -60,6 +64,7 @@ btn.addEventListener('click', (e) => {
 })
 btn.addEventListener('click', (e) => {
     e.preventDefault;
+    //check to see if the password form field is empty then execute code block
     if (password.value == null || password.value == undefined || password.value == '' || password.length < 6) {
         errPassword.style.display = 'block';
         errPassword.style.textAlign = 'right'
