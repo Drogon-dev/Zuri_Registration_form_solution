@@ -10,10 +10,10 @@ const errEmail = document.getElementById("errEmail");
 const errPassword = document.getElementById("errPassword");
 
 //adding the click event  listener to the submit button
-btn.addEventListener('click', (e) => {
+btn.addEventListener('focus', (e) => {
     e.preventDefault;
     //check to see if the FirstName form field is empty then execute code block
-    if (firstName.value == null || firstName.value == undefined || firstName.value == '' || firstName.value <= 0) {
+    if (firstName.value == '') {
         errFirstName.style.display = 'block';
         errFirstName.style.textAlign = 'right'
         errFirstName.style.fontSize = '10px'
@@ -27,10 +27,10 @@ btn.addEventListener('click', (e) => {
         firstName.style.background = 'none'
     }
 })
-btn.addEventListener('click', (e) => {
+btn.addEventListener('focus', (e) => {
     e.preventDefault;
     //check to see if the LastName form field is empty then execute code block
-    if (lastName.value == null || lastName.value == undefined || lastName.value == '' || lastName.value <= 0) {
+    if (lastName.value == '') {
         errLastName.style.display = 'block';
         errLastName.style.textAlign = 'right'
         errLastName.style.fontSize = '10px'
@@ -44,10 +44,10 @@ btn.addEventListener('click', (e) => {
         lastName.style.background = 'none'
     }
 })
-btn.addEventListener('click', (e) => {
+btn.addEventListener('focus', (e) => {
     e.preventDefault;
     //check to see if the email form field is empty then execute code block
-    if (email.value == null || email.value == undefined || email.value == '' || (email.value.indexOf('@') == -1) || (email.value.indexOf('.com') == -1) || email.value <= 0) {
+    if (email.value == '' || (email.value.indexOf('@') == -1) || (email.value.indexOf('.com') == -1)) {
         errEmail.style.display = 'block';
         errEmail.style.textAlign = 'right'
         errEmail.style.fontSize = '10px'
@@ -62,10 +62,10 @@ btn.addEventListener('click', (e) => {
         email.style.background = 'none'
     }
 })
-btn.addEventListener('click', (e) => {
+btn.addEventListener('focus', (e) => {
     e.preventDefault;
     //check to see if the password form field is empty then execute code block
-    if (password.value == null || password.value == undefined || password.value == '' || password.length < 6) {
+    if (password.value == '') {
         errPassword.style.display = 'block';
         errPassword.style.textAlign = 'right'
         errPassword.style.fontSize = '10px'
